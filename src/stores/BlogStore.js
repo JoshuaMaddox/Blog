@@ -3,6 +3,7 @@ import AppDispatcher from '../AppDispatcher'
 
 
 let _allBlogs;
+let _blogToEdit
 
 
 
@@ -29,6 +30,10 @@ class BlogStore extends EventEmitter {
 
   getAllBlogs() {
     return _allBlogs
+  }
+  
+  getBlogToEdit() {
+    return _blogToEdit
   }
 }
 

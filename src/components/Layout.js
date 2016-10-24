@@ -78,9 +78,6 @@ export default class Layout extends Component {
         <div className="navRow">
           <h3 className="brand"><Link to={'/'}>Blog</Link></h3>
           <div className="navBtn">
-            <Link to={'/blog'}>Read Blogs</Link>
-          </div>
-          <div className="navBtn">
             <Link to={'blogs/new'}>Write Blogs</Link>
           </div>
         </div>
@@ -92,11 +89,7 @@ export default class Layout extends Component {
           </div>
         </div>
         <div className="displayRow">
-          {/*-----------------------------*/}
-
           {showBlogs}
-          {/*-----------------------------*/}
-
         </div>
       </div>
     )

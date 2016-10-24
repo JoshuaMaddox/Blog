@@ -20,15 +20,27 @@ const API = {
         let { data } = res
         ServerActions.receiveAllBlogPosts(data)
       })
+      .catch(console.error)
   },
 
  deleteBlog(deleteId) {
-     axios.delete(`/api/blog/${deleteId}`)
+    axios.delete(`/api/blog/${deleteId}`)
       .then(res => {
         let { data } = res
         console.log(data)
         ServerActions.receiveAllBlogPosts(data)
       })
+      .catch(console.error)
+ },
+
+ sendEditedBlog(editedBlog) {
+  put(`/api/blog/${editedBlog}`)
+    .then(res => {
+      let { data } = res
+      console.log(data)
+      browserHistory.push('/')
+    })
+    .catch(console.error)
  }
 }
 

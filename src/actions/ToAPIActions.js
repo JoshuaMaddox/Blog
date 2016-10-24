@@ -11,6 +11,10 @@ const ToAPIActions = {
 
   deleteBlog(deleteId){
     API.deleteBlog(deleteId)
+  },
+
+  sendEditedBlog(editedBlog){
+    API.sendEditedBlog(editedBlog)
   }
 }
 
