@@ -29,23 +29,7 @@ const API = {
         console.log(data)
         ServerActions.receiveAllBlogPosts(data)
       })
- },
-
-  // getSingleChatroom(roomId) {
-  //   get(`/api/chatrooms/${roomId}`)
-  //     .then(res => {
-  //       let { data } = res
-  //       ServerActions.receiveSingleChatroom(data)
-  //     })
-  // },
-
-  sendMessage(message, roomId){
-    put(`/api/chatrooms/${roomId}`, message)
-      .then(res => {
-        let { data } = res
-        ServerActions.receiveSingleChatroom(data)
-      })
-  }
+ }
 }
 
 export default API

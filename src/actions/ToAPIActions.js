@@ -11,14 +11,6 @@ const ToAPIActions = {
 
   deleteBlog(deleteId){
     API.deleteBlog(deleteId)
-  },
-
-  // getChatroom(roomId) {
-  //   API.getSingleChatroom(roomId)
-  // },
-
-  sendMessage(message, roomId) {
-    API.sendMessage(message, roomId)
   }
 }
 

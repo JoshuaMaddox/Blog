@@ -3,8 +3,7 @@ import AppDispatcher from '../AppDispatcher'
 
 
 let _allBlogs;
-let _singleChatroom;
-let _messages; 
+
 
 
 class BlogStore extends EventEmitter {
@@ -14,14 +13,6 @@ class BlogStore extends EventEmitter {
       switch(action.type) {
         case 'RECEIVE_BLOGS':
           _allBlogs = action.payload.allBlogPosts
-          this.emit('CHANGE')
-          break
-        case 'RECEIVE_SINGLE_CHATROOM':
-          _singleChatroom = action.payload.singleChatroom
-          this.emit('CHANGE')
-          break
-        case 'MESSAGES_RECEIVED':
-          _messages = action.payload.messages
           this.emit('CHANGE')
           break
       }
@@ -38,14 +29,6 @@ class BlogStore extends EventEmitter {
 
   getAllBlogs() {
     return _allBlogs
-  }
-
-  getSingleChatroom() {
-    return _singleChatroom
-  }
-
-  getMessages() {
-    return _messages
   }
 }
 
