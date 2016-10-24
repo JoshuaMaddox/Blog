@@ -31,9 +31,9 @@ export default class Layout extends Component {
     })
   }
 
-  editBlog() {
-    //send info
-    //bush to edit location
+  editBlog(e) {
+    let id = e.target.id
+    ToAPIActions.getBlogToEdit(id)
   }
 
   deleteBlog(e){

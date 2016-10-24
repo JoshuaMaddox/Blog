@@ -33,6 +33,16 @@ const API = {
       .catch(console.error)
  },
 
+ getBlogToEdit(id) {
+  get(`/api/blog/${id}`)
+  .then(res => {
+      let { data } = res
+      console.log(data)
+      browserHistory.push('/blog/edit')
+    })
+    .catch(console.error)
+ },
+
  sendEditedBlog(editedBlog) {
   put(`/api/blog/${editedBlog}`)
     .then(res => {

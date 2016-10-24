@@ -36,7 +36,7 @@ export default class Layout extends Component {
       name: name.value,
       author: author.value,
       body: body.value,
-      date: date.value
+      date: date.value,
       id: id.value
     }
     ToAPIActions.sendEditedBlog(editedBlog)
