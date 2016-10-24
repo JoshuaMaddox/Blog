@@ -47,6 +47,11 @@ export default class Layout extends Component {
 
   render() {
 
+    const { blogToEdit } = this.state
+
+    if(blogToEdit) {
+      console.log('blogToEdit ', blogToEdit)
+    }
 
     return (
       <div>

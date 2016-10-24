@@ -37,7 +37,7 @@ const API = {
   get(`/api/blog/${id}`)
   .then(res => {
       let { data } = res
-      console.log(data)
+      console.log("I am API DATA: ", data)
       browserHistory.push('/blog/edit')
     })
     .catch(console.error)
